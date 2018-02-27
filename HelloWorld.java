@@ -12,7 +12,7 @@ public class HelloWorld {
         String myString = "An apple a day, keeps the playas at bay";
         System.out.println(myString);
 
-        float myNumber = 123;
+        float myNumber = 3.14F;
         System.out.println(myNumber);
 
 //        int x = 5;
