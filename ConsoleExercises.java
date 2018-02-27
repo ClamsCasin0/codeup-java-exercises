@@ -21,7 +21,7 @@ public class ConsoleExercises {
 //        System.out.println(secondWord);
 //        System.out.println(thirdWord);
 
-//          scanner.nextLine();
+//          sc.nextLine();
 
 //        System.out.println("Enter a sentence: ");
 //        String sentence = sc.nextLine();
@@ -34,8 +34,7 @@ public class ConsoleExercises {
         double length = Double.parseDouble(lengthString);
 
         System.out.print("Please enter the room width: ");
-        String widthString = sc.nextLine();
-        double width = Double.parseDouble(widthString);
+        double width = Double.parseDouble(sc.nextLine());
 
 
         double area = width * length;
