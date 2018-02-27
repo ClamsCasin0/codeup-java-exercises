@@ -3,13 +3,48 @@ import java.util.Scanner;
 public class ConsoleExercises {
 
     public static void main(String[] args) {
-    int userInput;
     Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter something: ");
-        userInput = sc.nextInt();
+          System.out.print("Enter a integer: ");
+          int userInput = sc.nextInt();
+          System.out.println("You entered : --> \"" + userInput + "\" <--");
 
-        System.out.println("You entered : --> \"" + userInput + "\" <--");
+
+
+//        System.out.print("Please enter 3 words: ");
+//        String firstWord, secondWord, thirdWord;
+//        firstWord = sc.nextLine();
+//        secondWord = sc.nextLine();
+//        thirdWord = sc.nextLine();
+
+//        System.out.println(firstWord);
+//        System.out.println(secondWord);
+//        System.out.println(thirdWord);
+
+//          scanner.nextLine();
+
+//        System.out.println("Enter a sentence: ");
+//        String sentence = sc.nextLine();
+//        System.out.println(sentence);
+
+
+
+        System.out.print("Please enter the room length: ");
+        String lengthString = sc.nextLine();
+        double length = Double.parseDouble(lengthString);
+
+        System.out.print("Please enter the room width: ");
+        String widthString = sc.nextLine();
+        double width = Double.parseDouble(widthString);
+
+
+        double area = width * length;
+        double perimeter = 2 * width + 2 * length;
+        double volume = length * length * length;
+
+        System.out.printf("%.2f = %.2f x %.2f\n", area, length, width);
+        System.out.printf("%.2f = 2 x %.2f + 2 x %.2f\n", perimeter, length, width);
+        System.out.printf("%.2f = %.2f x %.2f x %.2f\n", volume, length, length, length);
 
     }
 }
