@@ -113,7 +113,7 @@ public class ControlFlowExercises {
 
 
 
-//            boolean willContinue = true;
+//            boolean willContinue;
 //          do {
 //              System.out.println("Please enter a grade integer from 0 to 100");
 //              int gradeInteger = sc.nextInt();
