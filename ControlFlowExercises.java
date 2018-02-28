@@ -192,13 +192,13 @@ public class ControlFlowExercises {
        boolean willContinue = true;
 
         do {
-            System.out.println("Please enter an integer ");
+            System.out.print("Please enter a prime integer: ");
             int primeInteger = sc.nextInt();
             int i = primeInteger;
 
             if (i % 1 == 0 && i % i == 0) {
                 System.out.println(primeInteger + " is a prime number");
-            } else {
+            } else  {
                 System.out.println(primeInteger + " is a NOT prime number");
             }
         System.out.print("\nDo you wish to continue? [y/n] or [yes/no]");
