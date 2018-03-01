@@ -161,17 +161,17 @@ public class ControlFlowExercises {
 //            int weekInteger = sc.nextInt();
 //
 //            if(weekInteger == 1) {
-//                System.out.println("Sunday");
+//                System.out.println("Sunday, the first day of the week!");
 //            } else if(weekInteger == 2) {
-//                System.out.println("Monday");
+//                System.out.println("I hate Mondays");
 //            } else if(weekInteger == 3) {
-//                System.out.println("Tuesday");
+//                System.out.println("Tuesday, very Fat");
 //            } else if(weekInteger == 4) {
-//                System.out.println("Wednesday");
+//                System.out.println("Wednesday, also known as Hump Day");
 //            } else if(weekInteger == 5) {
-//                System.out.println("Thursday");
+//                System.out.println("Thursday, almost there-day");
 //            } else if(weekInteger == 6) {
-//                System.out.println("Friday");
+//                System.out.println("Friday, Get the party started!");
 //            } else if(weekInteger == 7) {
 //                System.out.println("Saturday, the best of them all!");
 //            }
@@ -189,29 +189,58 @@ public class ControlFlowExercises {
 
 //        2. Prompt the user for an integer. Output whether or not the number is prime.
 
-       boolean willContinue = true;
-
-        do {
-            System.out.print("Please enter a prime integer: ");
-            int primeInteger = sc.nextInt();
-            int i = primeInteger;
-
-            if (i % 1 == 0 && i % i == 0) {
-                System.out.println(primeInteger + " is a prime number");
-            } else  {
-                System.out.println(primeInteger + " is a NOT prime number");
-            }
-        System.out.print("\nDo you wish to continue? [y/n] or [yes/no]");
-        String userChoice = sc.next();
-        if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")) {
-            willContinue = true;
-        } else {
-            willContinue = false;
-        }
-    }while (willContinue);
+//       boolean willContinue;
+//
+//        do {
+//            System.out.print("Please enter a prime integer: ");
+//            long primeInteger = sc.nextInt();
+//            long i = primeInteger;
+//
+//            if (i % 1 == 0 && i % i == 0) {
+//                System.out.println(primeInteger + " is a prime number");
+//            } else  {
+//                System.out.println(primeInteger + " is a NOT prime number");
+//            }
+//        System.out.print("\nDo you wish to continue? [y/n] or [yes/no]");
+//        String userChoice = sc.next();
+//        if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")) {
+//            willContinue = true;
+//        } else {
+//            willContinue = false;
+//        }
+//    }while (willContinue);
 
 //        3. Prompt the user to enter an integer and output all the days of the week that
 //        have no more letters than the integer given.
+
+        boolean willContinue;
+
+        do {
+            System.out.print("Please enter an integer and days of the week will given accordingly to how many letters are in each day: ");
+            int daysOfWeekInteger = sc.nextInt();
+
+            if (daysOfWeekInteger == 6) {
+                System.out.println("Monday, " + "Friday, " + "and Sunday " + "have 6 letters");
+            } else if (daysOfWeekInteger == 7)  {
+                System.out.println("Tuesday" + " has 7 letters");
+            } else if (daysOfWeekInteger == 8) {
+                System.out.println("Thursday and " + "Saturday " + "have 8 letters");
+            } else if (daysOfWeekInteger == 9) {
+                System.out.println("Wednesday " + "has the most letters at 9");
+            } else {
+                System.out.println("Nope, try a different integer");
+            }
+
+            System.out.print("\nDo you wish to continue? [y/n] or [yes/no]");
+            String userChoice = sc.next();
+            if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")) {
+                willContinue = true;
+            } else {
+                willContinue = false;
+            }
+        }while (willContinue);
+
+
 //        4. Prompt the user to enter their name. Output whether the name is
 //                - short (less than 4 characters), medium (less than 9), long (more than 8)
 //        - contains the letter 'y'
