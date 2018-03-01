@@ -4,8 +4,11 @@ public class MethodExercises {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         //1
-//        System.out.println(add(15.5, 15.5));
+//        double sum = add(a1, b1);
+//        System.out.println("The sum of " + a1 + " and " + b1 + " is " + result);
+//        System.out.println(add(15, 15));
 //
 //        System.out.println(subtract(6, 5));
 //
@@ -23,12 +26,12 @@ public class MethodExercises {
 
 
 ////3
-        userChosenFactorial(sc);
+//        userChosenFactorial(sc);
 
 
 //4
-                  rollDiceGame(sc);
-
+                  diceRoll(sc);
+    //holds the main together
     }
 
 //1
@@ -37,7 +40,7 @@ public class MethodExercises {
 //        public static double add ( double a1, double b1){
 //            return a1 + b1;
 //        }
-//
+////
 ////
 //
 //
@@ -77,6 +80,7 @@ public class MethodExercises {
                 System.out.println("Not a number!");
                 return getInteger(min, max);
             }
+
             int userInput = sc.nextInt();
             if (userInput >= min && userInput <= max) {
                 return userInput;
@@ -91,45 +95,45 @@ public class MethodExercises {
 
 //3
 
-        public static long calculateFactorial(int num) {
-            int output = 1;
-            for (int i = 1; i <= num; i += 1) {
-                output *= i;
+//        public static long calculateFactorial(int num) {
+//            int output = num;
+//            for (int i = 1; i <= num; i++) {
+//                output *= i;
+//
+//            }
+//            return output;
+//        }
+//
+//        public static void userChosenFactorial(Scanner sc) {
+//            boolean willContinue;
+//            String userChoice;
+//            do {
+//                System.out.println("Please enter an integer from 1 to 10");
+//                int userInt = getInteger(1, 10);
+//                System.out.println(calculateFactorial(userInt));
+//                do {
+//                    System.out.println("Do you wish to continue? [y/n]: ");
+//                    userChoice = sc.next().trim();
+//                } while (!userChoice.equalsIgnoreCase("y") & !userChoice.equalsIgnoreCase("n"));
+//
+//                willContinue = userChoice.equalsIgnoreCase("y");
+//            } while (willContinue);
+//        }
 
-            }
-            return output;
-        }
-
-        public static void userChosenFactorial(Scanner sc) {
-            boolean willContinue;
-            String userChoice;
-            do {
-                System.out.println("Please enter an integer from 1 to 10");
-                int userInt = getInteger(1, 10);
-                System.out.println(calculateFactorial(userInt));
-                do {
-                    System.out.println("Do you wish to continue? [y/n]: ");
-                    userChoice = sc.next().trim();
-                } while (!userChoice.equalsIgnoreCase("y") & !userChoice.equalsIgnoreCase("n"));
-
-                willContinue = userChoice.equalsIgnoreCase("y");
-            } while (willContinue);
-        }
 
 
-
-    public static int randomWithRange(int min, int max)
+    public static int randomDiceRoll(int min, int max)
     {
         int range = (max - min) + 1;
         return (int)(Math.random() * range) + min;
     }
 
-    public static void rollDiceGame(Scanner sc) {
+    public static void diceRoll(Scanner sc) {
         String userChoice;
         System.out.print("Please enter the number of sides for the dice: ");
         int nSides = getInteger(1, 20);
         do {
-            System.out.println("You have rolled a " + randomWithRange(1, nSides) + " and a " + randomWithRange(1, nSides));
+            System.out.println("You have rolled a " + randomDiceRoll(1, nSides) + " and a " + randomDiceRoll(1, nSides));
             do {
                 System.out.println("Would you like to roll again? [y/n]");
                 userChoice = sc.next().trim();
