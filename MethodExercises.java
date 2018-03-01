@@ -5,15 +5,15 @@ public class MethodExercises {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //1
-        System.out.println(add(15.5, 15.5));
-
-        System.out.println(subtract(6, 5));
-
-        System.out.println(multiply(3, 5));
-
-        System.out.println(divide(14, 2));
-
-        System.out.println(modulus(50, 10));
+//        System.out.println(add(15.5, 15.5));
+//
+//        System.out.println(subtract(6, 5));
+//
+//        System.out.println(multiply(3, 5));
+//
+//        System.out.println(divide(14, 2));
+//
+//        System.out.println(modulus(50, 10));
 
 
 //2
@@ -21,7 +21,7 @@ public class MethodExercises {
         int userInput = getInteger(1, 10);
         System.out.println("Your integer is: " + userInput);
 //3
-//        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         userChosenFactorial(sc);
     }
 
@@ -29,37 +29,37 @@ public class MethodExercises {
 //1
 
 
-        public static double add ( double a1, double b1){
-            return a1 + b1;
-        }
-
+//        public static double add ( double a1, double b1){
+//            return a1 + b1;
+//        }
 //
-
-
-        public static double subtract ( double a1, double b1){
-            return a1 - b1;
-        }
-
+////
 //
-
-
-        public static double multiply ( double a1, double b1){
-            return a1 * b1;
-        }
-
 //
-
-
-        public static double divide ( double a1, double b1){
-            return a1 / b1;
-        }
-
+//        public static double subtract ( double a1, double b1){
+//            return a1 - b1;
+//        }
 //
-
-
-        public static double modulus ( double a1, double b1){
-            return a1 % b1;
-        }
+////
+//
+//
+//        public static double multiply ( double a1, double b1){
+//            return a1 * b1;
+//        }
+//
+////
+//
+//
+//        public static double divide ( double a1, double b1){
+//            return a1 / b1;
+//        }
+//
+////
+//
+//
+//        public static double modulus ( double a1, double b1){
+//            return a1 % b1;
+//        }
 
 //
 
