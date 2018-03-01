@@ -213,23 +213,55 @@ public class ControlFlowExercises {
 //        3. Prompt the user to enter an integer and output all the days of the week that
 //        have no more letters than the integer given.
 
+//        boolean willContinue;
+//
+//        do {
+//            System.out.print("Please enter an integer and days of the week will given accordingly to how many letters are in each day: ");
+//            int daysOfWeekInteger = sc.nextInt();
+//
+//            if (daysOfWeekInteger == 6) {
+//                System.out.println("Monday, " + "Friday, " + "and Sunday " + "have 6 letters");
+//            } else if (daysOfWeekInteger == 7)  {
+//                System.out.println("Tuesday" + " has 7 letters");
+//            } else if (daysOfWeekInteger == 8) {
+//                System.out.println("Thursday and " + "Saturday " + "have 8 letters");
+//            } else if (daysOfWeekInteger == 9) {
+//                System.out.println("Wednesday " + "has the most letters at 9");
+//            } else {
+//                System.out.println("Nope, try a different integer");
+//            }
+//
+//            System.out.print("\nDo you wish to continue? [y/n] or [yes/no]");
+//            String userChoice = sc.next();
+//            if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")) {
+//                willContinue = true;
+//            } else {
+//                willContinue = false;
+//            }
+//        }while (willContinue);
+
+
+//        4. Prompt the user to enter their name. Output whether the name is
+//                - short (less than 4 characters), medium (less than 9), long (more than 8)
+//        - contains the letter 'y'
+//                - is a palindrome
         boolean willContinue;
+       do {
 
-        do {
-            System.out.print("Please enter an integer and days of the week will given accordingly to how many letters are in each day: ");
-            int daysOfWeekInteger = sc.nextInt();
 
-            if (daysOfWeekInteger == 6) {
-                System.out.println("Monday, " + "Friday, " + "and Sunday " + "have 6 letters");
-            } else if (daysOfWeekInteger == 7)  {
-                System.out.println("Tuesday" + " has 7 letters");
-            } else if (daysOfWeekInteger == 8) {
-                System.out.println("Thursday and " + "Saturday " + "have 8 letters");
-            } else if (daysOfWeekInteger == 9) {
-                System.out.println("Wednesday " + "has the most letters at 9");
-            } else {
-                System.out.println("Nope, try a different integer");
-            }
+        System.out.println("Please enter your birth-given name: ");
+        String userName = sc.next();
+
+        if (userName.length() <= 4) {
+            System.out.println("Short - Your name is less than 4 characters");
+        } else if (userName.length() < 9) {
+            System.out.println("Medium - Your name is less than 9 characters");
+        } else if (userName.length() >= 9) {
+            System.out.println("Long - Your name is more than 9 characters");
+        } else if (userName.indexOf("y") <= 0) {
+            System.out.println("Your name has a \"y\" in it");
+        }
+
 
             System.out.print("\nDo you wish to continue? [y/n] or [yes/no]");
             String userChoice = sc.next();
@@ -238,13 +270,10 @@ public class ControlFlowExercises {
             } else {
                 willContinue = false;
             }
-        }while (willContinue);
+
+    } while (willContinue);
 
 
-//        4. Prompt the user to enter their name. Output whether the name is
-//                - short (less than 4 characters), medium (less than 9), long (more than 8)
-//        - contains the letter 'y'
-//                - is a palindrome
 //        5. Print out all times from 1:00am to 12:00pm.
 //                Example:
 //        1:00am
