@@ -16,15 +16,20 @@ public class MethodExercises {
 //        System.out.println(modulus(50, 10));
 
 
-//2
-        System.out.print("Enter a number between 1 and 10: ");
-        int userInput = getInteger(1, 10);
-        System.out.println("Your integer is: " + userInput);
-//3
-        Scanner sc = new Scanner(System.in);
-        userChosenFactorial(sc);
-    }
+////2
+//        System.out.print("Enter a number between 1 and 10: ");
+//        int userInput = getInteger(1, 10);
+//        System.out.println("Your integer is: " + userInput);
 
+
+////3
+        userChosenFactorial(sc);
+
+
+//4
+                  rollDiceGame(sc);
+
+    }
 
 //1
 
@@ -65,9 +70,9 @@ public class MethodExercises {
 
 
 
-//2
+////2
         public static int getInteger(int min, int max) {
-//            Scanner sc = new Scanner(System.in);
+            Scanner sc = new Scanner(System.in);
             if (!sc.hasNextInt()) {
                 System.out.println("Not a number!");
                 return getInteger(min, max);
@@ -90,9 +95,9 @@ public class MethodExercises {
             int output = 1;
             for (int i = 1; i <= num; i += 1) {
                 output *= i;
-                return output;
-            }
 
+            }
+            return output;
         }
 
         public static void userChosenFactorial(Scanner sc) {
@@ -112,6 +117,26 @@ public class MethodExercises {
         }
 
 
+
+    public static int randomWithRange(int min, int max)
+    {
+        int range = (max - min) + 1;
+        return (int)(Math.random() * range) + min;
+    }
+
+    public static void rollDiceGame(Scanner sc) {
+        String userChoice;
+        System.out.print("Please enter the number of sides for the dice: ");
+        int nSides = getInteger(1, 20);
+        do {
+            System.out.println("You have rolled a " + randomWithRange(1, nSides) + " and a " + randomWithRange(1, nSides));
+            do {
+                System.out.println("Would you like to roll again? [y/n]");
+                userChoice = sc.next().trim();
+            } while (!userChoice.equalsIgnoreCase("y") & !userChoice.equalsIgnoreCase("n"));
+
+        } while (!userChoice.equals("n"));
+    }
 
 
 
