@@ -1,14 +1,15 @@
 package util;
 
-
+import java.lang.NullPointerException;
 
 public class InputTest {
     public static void main(String[] args) {
+        NullPointerException npe;
         Input inPut = new Input();
 
         System.out.println("Please input an Integer");
-        int userInt = inPut.getInt();
-        System.out.println();
+        int randInt = inPut.getInt();
+        System.out.println(randInt);
 
         int betweenInt = inPut.getInt(1, 100);
         System.out.println(betweenInt);
@@ -23,7 +24,7 @@ public class InputTest {
 
         System.out.println("Please input yes or a no");
 
-        if(inPut.yesNo()) {
+        if(inPut.yesNo("Wanna enter a extra number?")) {
             System.out.println("You input yes or 'y'");
         } else {
             System.out.println("You said anything other than yes.");

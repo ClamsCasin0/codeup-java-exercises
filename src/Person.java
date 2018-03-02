@@ -31,6 +31,9 @@ public class Person {
 
         per.sayHello();
 
+        Person per2 = per;
+        per2.sayHello();
+
 //       test1
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
