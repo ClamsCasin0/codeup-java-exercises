@@ -35,7 +35,7 @@ public class Input {
 
 
         public int getInt(int min, int max) {
-            System.out.println("Please input an integer between " + min + " and " + max);
+//            System.out.println("Please input an integer between " + min + " and " + max);
             int userInput3 = getInt();
 
             if(userInput3 < min || userInput3 > max) {
@@ -61,10 +61,19 @@ public class Input {
             return getInt();
         }
 
+        public double getDouble() {
+            return sc.nextDouble();
+        }
+
+        public double getDouble(String prompt) {
+            System.out.println(prompt);
+            return getDouble();
+        }
+
 
         public double getDouble(double min, double max) {
-            System.out.println("Please input a double integer bewtween " + min + " and " + max);
-            double userinput5 = this.getDouble(min, max);
+//            System.out.println("Please input a double integer bewtween " + min + " and " + max);
+            double userinput5 = getDouble();
 
             if(userinput5 < min || userinput5 > max) {
                 return getDouble(min, max);
@@ -75,17 +84,9 @@ public class Input {
 
         public double getDouble(double min, double max, String prompt) {
             System.out.println(prompt);
-
                 return getDouble(min, max);
         }
 
-        public double getDouble() {
-            return sc.nextDouble();
-        }
 
-        public double getDouble(String prompt) {
-            System.out.println(prompt);
-            return getDouble();
-        }
 
 }
