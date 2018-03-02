@@ -34,13 +34,13 @@ public class Input {
         }
 
         public int getInt(){
-            System.out.println("Please input an integer: ");
-            int userinput2 = this.getInt();
+            return this.sc.nextInt();
         }
 
+
         public double getDouble(double min, double max) {
-            System.out.println("Please input a double integer bewtween " + min + " and " + max: );
-            int userinput3 = this.getDouble();
+            System.out.println("Please input a double integer bewtween " + min + " and " + max);
+            double userinput3 = this.getDouble();
 
             if(userinput3 > max || userinput3 < min) {
                 return getDouble(min, max);
@@ -48,4 +48,6 @@ public class Input {
                 return userinput3;
             }
         }
+
+
 }
