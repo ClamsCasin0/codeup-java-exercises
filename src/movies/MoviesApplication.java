@@ -1,6 +1,7 @@
 package movies;
 import util.Input;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MoviesApplication {
     public static void main(String[] args) {
@@ -31,7 +32,7 @@ public class MoviesApplication {
             } else if (userChoice.equals("7")) {
                 listMoviesCategory("animated");
             } else if(userChoice.equals("8")) {
-                addMovie();
+                userAddMovie();
             }
             System.out.println();
 
@@ -79,29 +80,58 @@ public class MoviesApplication {
         }
     }
 
+      //easy way of placing movie onto list
 
-    public static void addMovie() {
+//    public static void addMovie() {
+//
+//        Input input = new Input();
+//
+//
+//        System.out.println("Please enter the name of the movie you'd like to add: ");
+//        String userMovieAdd = input.getString();
+//
+//        System.out.println("Please enter \"comedy\"/\"horror\"/\"scifi\"/\"drama\"/\"musical\"/\"animated\" as the category/genre: ");
+//        String userMovieCategory = input.getString();
+//
+//        Movie userMovie = new Movie(userMovieAdd, userMovieCategory);
+//
+//        allMovies();
+//
+//        System.out.println("**---+---+---+---+---+---+---+---+---**");
+//        System.out.print("| ");
+////        System.out.println(userMovie.getNameIs() + " -- " + userMovie.getCategoryOf());
+//        System.out.printf("%-14s -- %-10s", userMovie.getNameIs(), userMovie.getCategoryOf());
+//        System.out.println();
+//        System.out.println("**---+---+---+---+---+---+---+---+---**");
+//        System.out.print("| ");
+//
+//
+//    }
 
+
+    public static void userAddMovie() {
         Input input = new Input();
+        Movie[] copyArray;
+        copyArray = new Movie [MoviesArray.findAll().length + 1];
 
-
+        System.arraycopy(MoviesArray.findAll(), 0, copyArray, 0, MoviesArray.findAll().length);
         System.out.println("Please enter the name of the movie you'd like to add: ");
         String userMovieAdd = input.getString();
 
-        System.out.println("Please name the category/genre of the movie entered: ");
+        System.out.println("Please enter \"comedy\"/\"horror\"/\"scifi\"/\"drama\"/\"musical\"/\"animated\" as the category/genre: ");
         String userMovieCategory = input.getString();
 
-        Movie userMovie = new Movie(userMovieAdd, userMovieCategory);
+        copyArray[copyArray.length - 1] = new Movie(userMovieAdd, userMovieCategory);
 
-        allMovies();
+        for(int i = 0; i < copyArray.length; i++) {
+            System.out.println("**---+---+---+---+---+---+---+---+---**");
+            System.out.print("| ");
+            System.out.printf("%-14s -- %-10s\n", copyArray[i].getNameIs(), copyArray[i].getCategoryOf());
+            System.out.println();
+            System.out.println("**---+---+---+---+---+---+---+---+---**");
+            System.out.print("| ");
 
-        System.out.println("**---+---+---+---+---+---+---+---+---**");
-        System.out.print("| ");
-//        System.out.println(userMovie.getNameIs() + " -- " + userMovie.getCategoryOf());
-        System.out.printf("%-14s -- %-10s", userMovie.getNameIs(), userMovie.getCategoryOf());
-        System.out.println();
-        System.out.println("**---+---+---+---+---+---+---+---+---**");
-        System.out.print("| ");
+        }
 
 
     }
