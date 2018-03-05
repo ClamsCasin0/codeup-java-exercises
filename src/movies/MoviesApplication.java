@@ -1,6 +1,6 @@
 package movies;
-import java.util.Scanner;
 import util.Input;
+import java.util.ArrayList;
 
 public class MoviesApplication {
     public static void main(String[] args) {

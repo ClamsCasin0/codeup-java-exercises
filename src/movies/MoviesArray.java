@@ -1,4 +1,6 @@
 package movies;
+import java.util.ArrayList;
+
 
 public class MoviesArray {
     public static Movie[] findAll() {
@@ -75,7 +77,7 @@ public class MoviesArray {
             new Movie("The French Connection", "drama"),
             new Movie("Forrest Gump", "drama"),
             new Movie("Ben-Hur", "drama"),
-            new Movie("Wuthering Heights", "drama"),
+            new Movie("Withering Heights", "drama"),
             new Movie("The Gold Rush", "drama"),
             new Movie("Dances With Wolves", "drama"),
             new Movie("City Lights", "drama"),
