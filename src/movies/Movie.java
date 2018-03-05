@@ -27,4 +27,5 @@ public class Movie {
     public void setCategoryOf(String categoryOf) {
         this.categoryOf = categoryOf;
     }
+
 }

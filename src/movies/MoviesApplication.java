@@ -118,8 +118,38 @@ public class MoviesApplication {
         System.out.println("Please enter the name of the movie you'd like to add: ");
         String userMovieAdd = input.getString();
 
+//        System.out.println("Please enter \"comedy\"/\"horror\"/\"scifi\"/\"drama\"/\"musical\"/\"animated\" as the category/genre: ");
+//        String userMovieCategory = input.getString();
+
+        do {
+
         System.out.println("Please enter \"comedy\"/\"horror\"/\"scifi\"/\"drama\"/\"musical\"/\"animated\" as the category/genre: ");
         String userMovieCategory = input.getString();
+
+        if(userMovieCategory.equals("comedy")) {
+            userMovieCategory.equalsIgnoreCase("comedy");
+        } else if(userMovieCategory.equals("horror")) {
+            userMovieCategory.equals("horror");
+        } else if(userMovieCategory.equals("scifi")) {
+            userMovieCategory.equals("scifi");
+        } else if (userMovieCategory.equals("drama")) {
+            userMovieCategory.equals("drama");
+        } else if (userMovieCategory.equals("musical")) {
+            userMovieCategory.equals("musical");
+        } else if (userMovieCategory.equals("animated")) {
+            userMovieCategory.equals("animated");
+        } else
+
+        System.out.println();
+
+        } while(!userMovieCategory.equals("comedy") || !userMovieCategory.equals("horror") && !userMovieCategory.equals("scifi") &&
+                !userMovieCategory.equals("drama") && !userMovieCategory.equals("musical") && !userMovieCategory.equals("animated"));
+
+
+
+
+
+
 
         copyArray[copyArray.length - 1] = new Movie(userMovieAdd, userMovieCategory);
 
@@ -135,5 +165,30 @@ public class MoviesApplication {
 
 
     }
+
+//    private static void notCategory() {
+//        Input input = new Input();
+//
+////        System.out.println("Please enter \"comedy\"/\"horror\"/\"scifi\"/\"drama\"/\"musical\"/\"animated\" as the category/genre: ");
+////        String userMovieCategory = input.getString();
+////
+////        if(userMovieCategory.equals("comedy")) {
+////            userMovieCategory.equalsIgnoreCase("comedy");
+////        } else if(userMovieCategory.equals("horror")) {
+////            userMovieCategory.equals("horror");
+////        } else if(userMovieCategory.equals("scifi")) {
+////            userMovieCategory.equals("scifi");
+////        } else if (userMovieCategory.equals("drama")) {
+////            userMovieCategory.equals("drama");
+////        } else if (userMovieCategory.equals("musical")) {
+////            userMovieCategory.equals("musical");
+////        } else if (userMovieCategory.equals("animated")) {
+////            userMovieCategory.equals("animated");
+////        } else { notCategory(); }
+////
+////        System.out.println();
+//
+//
+
 
 }
