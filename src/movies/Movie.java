@@ -7,6 +7,16 @@ public class Movie {
 
     private String categoryOf;
 
+    private int rating;
+
+
+
+    public Movie(String nameIs, String categoryOf, int rating) {
+        this.nameIs = nameIs;
+        this.categoryOf = categoryOf;
+        this.rating = rating;
+    }
+
     public Movie(String nameIs, String categoryOf) {
         this.nameIs = nameIs;
         this.categoryOf = categoryOf;
@@ -28,4 +38,11 @@ public class Movie {
         this.categoryOf = categoryOf;
     }
 
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
 }

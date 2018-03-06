@@ -2,11 +2,13 @@ package movies;
 import util.Input;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 public class MoviesApplication {
     public static void main(String[] args) {
         Input input = new Input();
         String userChoice;
+
 
 
         System.out.println("Hello again to the Post Oscars Movie Database!");
@@ -111,8 +113,8 @@ public class MoviesApplication {
 
         public static void userAddMovie () {
             Input input = new Input();
-            Movie[] copyArray;
-            copyArray = new Movie[MoviesArray.findAll().length + 1];
+//            Movie[] copyArray;
+            Movie[] copyArray = new Movie[MoviesArray.findAll().length + 1];
 
             System.arraycopy(MoviesArray.findAll(), 0, copyArray, 0, MoviesArray.findAll().length);
             System.out.println("Please enter the name of the movie you'd like to add: ");
@@ -160,7 +162,7 @@ public class MoviesApplication {
 //        String userMovieCategory = input.getString();
 //
 //                if (userMovieCategory.equals("comedy")) {
-//                    System.out.println(userMovieCategory.equalsIgnoreCase("comedy"));
+//                    return System.out.println(userMovieCategory.equalsIgnoreCase("comedy"));
 //                } else if (!userMovieCategory.equals("horror")) {
 //                    System.out.println(userMovieCategory.equalsIgnoreCase("horror"));
 //                } else if (!userMovieCategory.equals("scifi")) {
@@ -180,8 +182,19 @@ public class MoviesApplication {
 //            while (!userMovieCategory.equals("comedy") || !userMovieCategory.equals("horror") || !userMovieCategory.equals("scifi") ||
 //                    !userMovieCategory.equals("drama") || !userMovieCategory.equals("musical") || !userMovieCategory.equals("animated"));
 
-
-
+                /////add rating
+//            public static void addRating(Movie[] movies) {
+//                random rng = new Random();
+//                for(Movie movie : movies) {
+//                    movie.setRating(rng.nextInt(10));
+//                }
+//            }
+//             //reset to new movie array
+//            public static Movie[] findAll() {
+//            Movie[] movies = allMovies();
+//            addRating(movies);
+//            return movies;
+//            }
 
 
 
