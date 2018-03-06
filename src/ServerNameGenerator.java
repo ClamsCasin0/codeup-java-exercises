@@ -18,4 +18,6 @@ public class ServerNameGenerator {
     System.out.println("Your server name is: " + serverName);
 
     }
+
+
 }
