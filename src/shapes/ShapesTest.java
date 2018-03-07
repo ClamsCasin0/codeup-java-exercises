@@ -4,41 +4,55 @@ public class ShapesTest {
 
     public static void main(String[] args) {
 
-        Measurable myShape =  new Measurable() {
-            @Override
-            public double getPerimeter() {
-                return 0;
-            }
+        Measurable myShape = new Rectangle(5, 10);
+        System.out.println("My rectangle's area is " + myShape.getArea());
+        System.out.println("My rectangle's perimeter is " + myShape.getPerimeter());
 
-            @Override
-            public double getArea() {
-                return 0;
-            }
-        };
+        myShape = new Rectangle(8, 3);
+        System.out.println("The rectangle's area is " + myShape.getArea());
+        System.out.println("The rectangle's perimeter is " + myShape.getPerimeter());
 
-        Square myShape2 = new Square() {
-            @Override
-            public double getPerimeter() {
-                return super.getPerimeter();
-            }
+        myShape = new Square(5);
+        System.out.println("The square's area is " + myShape.getArea());
+        System.out.println("The square's perimeter is " + myShape.getPerimeter());
 
-            @Override
-            public double getArea() {
-                return super.getArea();
-            }
-        };
 
-        Rectangle myShape3 = new Rectangle() {
-            @Override
-            public double getPerimeter() {
-                return super.getPerimeter();
-            }
 
-            @Override
-            public double getArea() {
-                return super.getArea();
-            }
-        }
+//        Measurable myShape =  new Measurable() {
+//            @Override
+//            public double getPerimeter() {
+//                return 0;
+//            }
+//
+//            @Override
+//            public double getArea() {
+//                return 0;
+//            }
+//        };
+
+//        Square myShape2 = new Square() {
+//            @Override
+//            public double getPerimeter() {
+//                return super.getPerimeter();
+//            }
+//
+//            @Override
+//            public double getArea() {
+//                return super.getArea();
+//            }
+//        };
+//
+//        Rectangle myShape3 = new Rectangle() {
+//            @Override
+//            public double getPerimeter() {
+//                return super.getPerimeter();
+//            }
+//
+//            @Override
+//            public double getArea() {
+//                return super.getArea();
+//            }
+//        };
 
 
 
