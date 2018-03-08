@@ -18,7 +18,7 @@ public class Student {
         return studentName;
     }
 
-    public void addGrade() {
+    public void addGrade(int grade) {
         grades.add(grade);
     }
 
@@ -36,4 +36,26 @@ public class Student {
     }
 
 
+
+
+    public static void main(String[] args) {
+
+        Student student = new Student("Oscar");
+
+        System.out.println(student.grades.size() + "is the total number of grades for " + student);
+
+        student.addGrade(85);
+        student.addGrade(78);
+        student.addGrade(93);
+        student.addGrade(90);
+        student.addGrade(88);
+
+        double gradeOutput = (85 + 78 + 93 + 90 + 88) / 5;
+
+        System.out.println(gradeOutput + " is what the grade average we could predict");
+        System.out.println(student.getGradeAverage() + " is the actual grade average of " + student);
+
+
+
+    }
 }
