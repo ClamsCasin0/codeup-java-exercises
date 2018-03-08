@@ -42,7 +42,7 @@ public class Student {
 
         Student student = new Student("Oscar");
 
-        System.out.println(student.grades.size() + "is the total number of grades for " + student);
+        System.out.println(student.grades.size() + " is the total number of grades for " + student.getStudentName());
 
         student.addGrade(85);
         student.addGrade(78);
@@ -52,8 +52,8 @@ public class Student {
 
         double gradeOutput = (85 + 78 + 93 + 90 + 88) / 5;
 
-        System.out.println(gradeOutput + " is what the grade average we could predict");
-        System.out.println(student.getGradeAverage() + " is the actual grade average of " + student);
+        System.out.println(gradeOutput + " is our grade average prediction");
+        System.out.println(student.getGradeAverage() + " is the actual grade average of " + student.getStudentName());
 
 
 
