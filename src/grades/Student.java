@@ -1,6 +1,8 @@
 package grades;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class Student {
 
@@ -21,6 +23,14 @@ public class Student {
     public void addGrade(int grade) {
         grades.add(grade);
     }
+
+    public List<Integer> getGrades() {
+        return grades;
+    }
+
+//    public HashMap<String, Student> getUserNames() {
+//        return
+//    }
 
     public double getGradeAverage() {
         int numberOfGrades = grades.size();
