@@ -13,11 +13,11 @@ public class FileHelper {
     //Test Methods
     public static void main(String[] args) {
 
-        String filePath = "src/util/tester.txt";
+//        String filePath = "src/util/tester.txt";
 
         //test slurp
-        List<String> results = FileHelper.slurp(filePath);
-        System.out.println(results);
+//        List<String> results = FileHelper.slurp(filePath);
+//        System.out.println(results);
 
         //test spit
         //1
