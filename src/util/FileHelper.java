@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,36 +17,53 @@ public class FileHelper {
                        return Files.readAllLines(path);
                     } catch (IOException e) {
                         System.out.printf("Error when trying to slurp %s: %s\n", filepath, e.getMessage());
-                        System.exit(1);
-                        return new ArrayList<>(); // we'll never get here, but the compiler doesn't know that
+//                        System.exit(1);
+                        throw new RuntimeException();
+//                        return new ArrayList<>(); // unreachable statment
                     }
             }
 
-    public void spit(String filename, List<String> contents[, boolean append]) {
+    public static void spit(String filename, List<String> contents) {
+               spit(filename, contents, false);
+            }
 
-        String directory;
-        String filename;
-        Path dataDirectory = Paths.get(directory);
-        Path dataFile = Paths.get(directory, filename);
-        if (Files.notExists(dataDirectory)) {
-            Files.createDirectories(dataDirectory);
-        }
-        if (! Files.exists(dataFile)) {
-            Files.createFile(dataFile);
-        }
+            public static void spit(String filename, List<String> contents, boolean append) {
+                // sets the file to open mode, method either appends to an existing file, or overwrites the existing contents
+                        StandardOpenOption option = append ? StandardOpenOption.APPEND : StandardOpenOption.TRUNCATE_EXISTING;
+                Path path = Paths.get(filename);
 
-    }
+                        // create parent directories
+                                if (! Files.exists(path)) {
+                        try {
+                               Files.createDirectories(path);
+                               Files.createFile(path);
+                           } catch (IOException e) {
+                                System.out.printf("Error creating file %s: %s\n", path, e.getMessage());
+//                               System.exit(1);
+                                throw new RuntimeException();
+                            }
+                    }
 
-    public void makeExciting(String filename) {
-//        List<String> readme = Files.readAllLines(Paths.get("README.md"));
-        ArrayList<String> lowerCasedReadme = new ArrayList<>();
+                        // writes file content
+                                try {
+                        Files.write(path, contents, option);
+                    } catch (IOException e) {
+                       System.out.printf("Error writing contents to %s: %s\n", filename, e.getMessage());
+//                        System.exit(1);
+                          throw new RuntimeException();
+                   }
+            }
 
-        for(String line : readme) {
-            lowerCasedReadme.add(line.toLowerCase());
+    public static void makeExciting(String filename) {
+                List<String> excitedLines = new ArrayList<>();
 
-        }
-        Files.write(Paths.get("README-lowercased.md"), lowerCasedReadme);
-    }
+                        for(String line : slurp(filename)) {
+                        String excitedLine = line.toUpperCase() + "!";
+                        excitedLines.add(excitedLine);
+                    }
+
+                        spit(filename, excitedLines);
+            }
 
 
 }
