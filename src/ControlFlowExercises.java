@@ -84,33 +84,33 @@ public class ControlFlowExercises {
 
 
 
-//            boolean willContinue = true;
-//
-//            do {
-//                System.out.print("What number would you like to go up to? ");
-//                int userInt = sc.nextInt();
-//
-//                System.out.println("\nHere is your table!");
-//                System.out.println("\nnumber | squared | cubed");
-//                System.out.println("------ | ------- | -----");
-//
-//                for (int i = 1; i <= userInt; i++) {
-//                    String output = "";
-//                    output += String.format("%-7d", i);
-//                    output += String.format("|%-9d", i * i);
-//                    output += String.format("|%d", i * i * i);
-//                    System.out.println(output);
-//                }
-//
-//                System.out.print("\nDo you wish to continue? [y/n]");
-//                String userChoice = sc.next();
-//                if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")) {
-//                    willContinue = true;
-//                } else {
-//                    willContinue = false;
-//                }
-//
-//            } while (willContinue);
+            boolean willContinue = true;
+
+            do {
+                System.out.print("What number would you like to go up to? ");
+                int userInt = sc.nextInt();
+
+                System.out.println("\nHere is your table!");
+                System.out.println("\nnumber | squared | cubed");
+                System.out.println("------ | ------- | -----");
+
+                for (int i = 1; i <= userInt; i++) {
+                    String output = "";
+                    output += String.format("%-7d", i);
+                    output += String.format("|%-9d", i * i);
+                    output += String.format("|%d", i * i * i);
+                    System.out.println(output);
+                }
+
+                System.out.print("\nDo you wish to continue? [y/n]");
+                String userChoice = sc.next();
+                if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")) {
+                    willContinue = true;
+                } else {
+                    willContinue = false;
+                }
+
+            } while (willContinue);
 
 
 
@@ -247,33 +247,33 @@ public class ControlFlowExercises {
 //                - short (less than 4 characters), medium (less than 9), long (more than 8)
 //        - contains the letter 'y'
 //                - is a palindrome
-        boolean willContinue;
-       do {
-
-
-        System.out.println("Please enter your birth-given name: ");
-        String userName = sc.next();
-
-        if (userName.length() <= 4) {
-            System.out.println("Short - Your name is less than 4 characters");
-        } else if (userName.length() < 9) {
-            System.out.println("Medium - Your name is less than 9 characters");
-        } else if (userName.length() >= 9) {
-            System.out.println("Long - Your name is more than 9 characters");
-        } else if (userName.indexOf("y") <= 0) {
-            System.out.println("Your name has a \"y\" in it");
-        }
-
-
-            System.out.print("\nDo you wish to continue? [y/n] or [yes/no]");
-            String userChoice = sc.next();
-            if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")) {
-                willContinue = true;
-            } else {
-                willContinue = false;
-            }
-
-    } while (willContinue);
+//        boolean willContinue;
+//       do {
+//
+//
+//        System.out.println("Please enter your birth-given name: ");
+//        String userName = sc.next();
+//
+//        if (userName.length() <= 4) {
+//            System.out.println("Short - Your name is less than 4 characters");
+//        } else if (userName.length() < 9) {
+//            System.out.println("Medium - Your name is less than 9 characters");
+//        } else if (userName.length() >= 9) {
+//            System.out.println("Long - Your name is more than 9 characters");
+//        } else if (userName.indexOf("y") <= 0) {
+//            System.out.println("Your name has a \"y\" in it");
+//        }
+//
+//
+//            System.out.print("\nDo you wish to continue? [y/n] or [yes/no]");
+//            String userChoice = sc.next();
+//            if (userChoice.equalsIgnoreCase("y") || userChoice.equalsIgnoreCase("yes")) {
+//                willContinue = true;
+//            } else {
+//                willContinue = false;
+//            }
+//
+//    } while (willContinue);
 
 
 //        5. Print out all times from 1:00am to 12:00pm.
@@ -285,7 +285,7 @@ public class ControlFlowExercises {
 //                this will help you for this bonus...
 //        https://stackoverflow.com/questions/12421444/how-to-format-a-number-0-9-to-display-with-2-digits-its-not-a-date
 
-        DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
+//        DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
 
 
     }
